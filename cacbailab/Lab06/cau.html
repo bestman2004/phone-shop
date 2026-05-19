@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab06 - Flexbox Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      border: 4px solid white;
+    }
+
+    .header {
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background: tomato;
+    }
+
+    .layout {
+      display: flex;
+      min-height: calc(100vh - 56px);
+    }
+
+    .aside-left {
+      width: 20%;
+      padding-top: 12px;
+      text-align: center;
+      background: gold;
+    }
+
+    .content {
+      width: 60%;
+      padding: 20px 8px 10px;
+      background: #08b8e8;
+    }
+
+    .content p {
+      margin: 0 0 18px;
+    }
+
+    .content img {
+      display: block;
+      width: 55%;
+      max-width: 650px;
+      min-width: 360px;
+      height: auto;
+      margin: 0 auto;
+      border: 2px solid blue;
+      border-radius: 10px;
+    }
+
+    .aside-right {
+      width: 20%;
+      padding-top: 12px;
+      text-align: center;
+      background: #f45cad;
+    }
+
+    .footer {
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      background: lightgreen;
+    }
+
+    @media (max-width: 600px) {
+      .layout {
+        display: block;
+        min-height: auto;
+      }
+
+      .aside-left,
+      .content,
+      .aside-right {
+        width: 100%;
+        min-height: 90px;
+      }
+
+      .content {
+        padding: 14px;
+      }
+
+      .content img {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">Header</div>
+
+    <div class="layout">
+      <aside class="aside-left">Aside 1</aside>
+
+      <main class="content">
+        <p>
+          Mô-đun Flexbox Layout (Flexible Box) (Theo khuyến nghị của W3C kể từ
+          tháng 10 năm 2017) nhằm mục đích cung cấp một cách bố trí, sắp xếp và
+          phân phối không gian hiệu quả hơn các item trong một container, ngay cả
+          khi kích thước của chúng không xác định hoặc động (Do đó có từ 'flex').
+        </p>
+
+        <img src="Bai_2_Minh_hoa_layout/img/img_01012024.jpg" alt="Ảnh minh họa">
+      </main>
+
+      <aside class="aside-right">Aside 2</aside>
+    </div>
+
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>

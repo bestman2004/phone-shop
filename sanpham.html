@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Shop - Sản phẩm</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Phone Shop</div>
+
+      <nav class="menu">
+        <a href="trangchu.html">Trang chủ</a>
+        <a class="active" href="sanpham.html">Sản phẩm</a>
+        <a href="gioithieu.html">Giới thiệu</a>
+        <a href="lienhe.html">Liên hệ</a>
+        <a href="labthuchanh.html">Lab thực hành</a>
+      </nav>
+
+      <div class="header-actions">
+        <form class="site-search">
+          <input type="text" placeholder="Tìm điện thoại..." />
+          <button type="submit">Tìm</button>
+        </form>
+
+        <a class="login-link" href="#dangnhap">Đăng nhập</a>
+        <a class="cart-link" href="#"><span>0</span> Giỏ hàng</a>
+      </div>
+    </header>
+
+    <section id="dangnhap" class="login-section">
+      <a class="close-login" href="#">×</a>
+      <h2>ĐĂNG NHẬP</h2>
+
+      <form class="login-box">
+        <label>
+          <span>Email</span>
+          <input type="email" placeholder="Email" />
+        </label>
+
+        <label>
+          <span>Mật khẩu</span>
+          <input type="password" placeholder="Mật khẩu" />
+        </label>
+
+        <a class="forgot-link" href="#">Quên mật khẩu?</a>
+        <button type="submit">Đăng nhập</button>
+        <p>Chưa có tài khoản? <a href="#">Đăng kí</a></p>
+      </form>
+    </section>
+
+    <section class="section">
+      <h2>Danh sách sản phẩm</h2>
+
+      <div class="category-menu">
+        <a href="#iphone">iPhone</a>
+        <a href="#samsung">Samsung</a>
+        <a href="#xiaomi">Xiaomi</a>
+        <a href="#nokia">Nokia</a>
+      </div>
+
+      <h3 id="iphone" class="brand-title">iPhone</h3>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/iPhone 15 Pro Max.jpg" alt="iPhone 15 Pro Max" />
+          <h3>iPhone 15 Pro Max</h3>
+          <p>Màn hình 6.7 inch, camera đẹp, hiệu năng mạnh.</p>
+          <div class="price">29.990.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/iphone 15.webp" alt="iPhone 15" />
+          <h3>iPhone 15</h3>
+          <p>Camera 48MP, thiết kế đẹp, dùng mượt hằng ngày.</p>
+          <div class="price">19.990.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/iphone 14.webp" alt="iPhone 14" />
+          <h3>iPhone 14</h3>
+          <p>Máy bền, chụp ảnh tốt, phù hợp học tập và công việc.</p>
+          <div class="price">14.990.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+      </div>
+
+      <h3 id="samsung" class="brand-title">Samsung</h3>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/Samsung S24 Ultra.webp" alt="Samsung Galaxy S24 Ultra" />
+          <h3>Samsung Galaxy S24 Ultra</h3>
+          <p>Màn hình đẹp, pin khỏe, hỗ trợ Galaxy AI.</p>
+          <div class="price">27.990.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/Samsung Galaxy A55.avif" alt="Samsung Galaxy A55" />
+          <h3>Samsung Galaxy A55</h3>
+          <p>Giá tốt, camera ổn định, pin dùng lâu.</p>
+          <div class="price">9.990.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/Samsung Galaxy Z Flip.webp" alt="Samsung Galaxy Z Flip" />
+          <h3>Samsung Galaxy Z Flip</h3>
+          <p>Điện thoại gập nhỏ gọn, thiết kế thời trang.</p>
+          <div class="price">21.990.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+      </div>
+
+      <h3 id="xiaomi" class="brand-title">Xiaomi</h3>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/Xiaomi 14.png"Xiaomi 14" />
+          <h3>Xiaomi 14</h3>
+          <p>Giá tốt, cấu hình cao, sạc nhanh.</p>
+          <div class="price">18.990.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/xiaomi11.png" alt="Xiaomi Redmi Note 13" />
+          <h3>Redmi Note 13</h3>
+          <p>Màn hình lớn, pin trâu, phù hợp học sinh sinh viên.</p>
+          <div class="price">5.490.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/xiaomi_poco_x7_den_vang_1_d5a61e641a.webp" alt="POCO X6 Pro" />
+          <h3>POCO X6 Pro</h3>
+          <p>Cấu hình mạnh, chơi game tốt trong tầm giá.</p>
+          <div class="price">8.990.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+      </div>
+
+      <h3 id="nokia" class="brand-title">Nokia</h3>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/Nokia G22.webp" alt="Nokia G22" />
+          <h3>Nokia G22</h3>
+          <p>Pin tốt, giao diện dễ dùng, phù hợp người lớn tuổi.</p>
+          <div class="price">3.990.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/Nokia C32.webp" alt="Nokia C32" />
+          <h3>Nokia C32</h3>
+          <p>Giá rẻ, bền bỉ, đáp ứng nhu cầu cơ bản.</p>
+          <div class="price">2.990.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/Nokia 8210 4G.webp" alt="Nokia 8210 4G" />
+          <h3>Nokia 8210 4G</h3>
+          <p>Máy phím cơ bản, pin lâu, nghe gọi tốt.</p>
+          <div class="price">1.590.000 VND</div>
+          <button>Mua ngay</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <p>Họ tên: Phan Võ Lâm Anh Hào</p>
+        <p>MSSV: DH52200639</p>
+      </div>
+      <div>
+        <p>Nhóm: 18</p>
+        <p>Ca: 4</p>
+      </div>
+      <p class="copyright">2026 Phone Shop. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab08 - Cau 1</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+    }
+
+    .slider {
+      width: min(625px, calc(100% - 66px));
+      margin: 8px auto 0;
+    }
+
+    .slide-box {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      width: 26px;
+      height: 34px;
+      border: none;
+      background: red;
+      color: white;
+      font-size: 18px;
+      line-height: 34px;
+      text-align: center;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .dots {
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      margin: 0 2px;
+      border-radius: 50%;
+      background: #9c9c9c;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: #555555;
+    }
+
+    @media (max-width: 600px) {
+      .slider {
+        width: 100%;
+        margin-top: 0;
+      }
+
+      .arrow {
+        width: 24px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+      }
+
+      .dots {
+        margin-top: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slide-box">
+      <div class="slide active">
+        <img src="img/slide_1.jpeg" alt="Anh phong canh 1">
+      </div>
+      <div class="slide">
+        <img src="img/slide_2.jpg" alt="Anh phong canh 2">
+      </div>
+      <div class="slide">
+        <img src="img/slide_3.jpg" alt="Anh phong canh 3">
+      </div>
+      <div class="slide">
+        <img src="img/slide_4.jpg" alt="Anh phong canh 4">
+      </div>
+      <div class="slide">
+        <img src="img/slide_5.jpg" alt="Anh phong canh 5">
+      </div>
+
+      <button class="arrow prev" onclick="plusSlide(-1)">&lt;</button>
+      <button class="arrow next" onclick="plusSlide(1)">&gt;</button>
+    </div>
+
+    <div class="dots">
+      <span class="dot active" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    var slides = document.getElementsByClassName("slide");
+    var dots = document.getElementsByClassName("dot");
+
+    function showSlide(index) {
+      if (index >= slides.length) {
+        slideIndex = 0;
+      }
+
+      if (index < 0) {
+        slideIndex = slides.length - 1;
+      }
+
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].className = "slide";
+        dots[i].className = "dot";
+      }
+
+      slides[slideIndex].className = "slide active";
+      dots[slideIndex].className = "dot active";
+    }
+
+    function plusSlide(number) {
+      slideIndex = slideIndex + number;
+      showSlide(slideIndex);
+    }
+
+    function currentSlide(index) {
+      slideIndex = index;
+      showSlide(slideIndex);
+    }
+  </script>
+</body>
+</html>

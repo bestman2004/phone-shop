@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab06 - Menu Responsive</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .navbar {
+        background: #333;
+      }
+
+      .menu {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .menu a {
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .menu a:hover,
+      .menu a.active {
+        color: #222;
+        background: #62c4f3;
+      }
+
+      .hamburger {
+        display: none;
+        width: 48px;
+        height: 48px;
+        margin-left: auto;
+        padding: 13px;
+        cursor: pointer;
+      }
+
+      .hamburger span {
+        display: block;
+        height: 3px;
+        margin-bottom: 5px;
+        background: white;
+        border-radius: 4px;
+      }
+
+      .content {
+        min-height: 240px;
+        background: white;
+      }
+
+      @media (max-width: 600px) {
+        .navbar {
+          background: #62c4f3;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .menu {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background: #333;
+        }
+
+        .menu-toggle:checked ~ .menu {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="menu">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="content"></div>
+  </body>
+</html>
